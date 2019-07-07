@@ -47,7 +47,7 @@ public class RandomString {
 	public static void main(String [] args) {
 		System.out.println(RandomString.uuid());
 		System.out.println(RandomString.string(32));
-		System.out.println(RandomString.string());
+		System.out.println(RandomString.number());
 	}
 
 }
