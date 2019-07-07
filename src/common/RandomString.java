@@ -3,7 +3,10 @@ package common;
 import java.security.SecureRandom;
 import java.util.Random;
 import java.util.UUID;
-
+/**
+* @author vike0906
+* @since 2019-07-08
+*/
 public class RandomString {
 	
 	/**Éú³ÉUUID*/
