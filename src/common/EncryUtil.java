@@ -39,6 +39,22 @@ public class EncryUtil {
 		return null;
 		
 	}
+	
+	public static String sha512(String inputStr) {
+		if(inputStr!=null) {
+			try {
+				MessageDigest sha512 = MessageDigest.getInstance("SHA-512");
+				byte[] results =  sha512.digest(inputStr.getBytes());
+				return bytesToHexString(results);
+			} catch (NoSuchAlgorithmException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return null;
+		
+	}
+	
 	/**将字节数组转换成十六进制字符串*/
 	private static String bytesToHexString(byte[] bytes){
         StringBuffer sb = new StringBuffer(bytes.length);
@@ -70,7 +86,11 @@ public class EncryUtil {
     public static void main(String [] args) {
     	String str = "test";
     	System.out.println(md5(str));
+    	System.out.println(md5(str).length());
     	System.out.println(sha256(str));
+    	System.out.println(sha256(str).length());
+    	System.out.println(sha512(str));
+    	System.out.println(sha512(str).length());
     }
 	
 	
