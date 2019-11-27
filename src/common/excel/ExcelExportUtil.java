@@ -45,7 +45,7 @@ public class ExcelExportUtil {
         /**处理主体内容*/
         exportList.stream().forEach(
                 a->fieldSorts.stream()
-                        .sorted(Comparator.comparingInt(b->b.getIndex()))
+                        .sorted(Comparator.comparingInt(FieldSort::getIndex))
                         .forEach(b->switchPrint(a,b.getField()))
         );
 
